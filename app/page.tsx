@@ -20,7 +20,7 @@ export default function Home() {
       <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/biglogo2.png"
+            src="/biglogo3.jpg"
             alt="Pet Portrait Hero"
             fill
             className="object-cover brightness-[0.7]"
