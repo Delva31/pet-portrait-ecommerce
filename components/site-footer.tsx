@@ -27,14 +27,10 @@ export function SiteFooter() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold mb-3">Quick Links</h3>
+            <h3 className="font-semibold mb-3">{t('quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-muted-foreground hover:text-primary">
@@ -46,7 +42,7 @@ export function SiteFooter() {
                   {t('gallery')}
                 </Link>
               </li>
-              <li>
+             {/* <li>
                 <Link href="/services" className="text-muted-foreground hover:text-primary">
                   {t('services')}
                 </Link>
@@ -55,7 +51,7 @@ export function SiteFooter() {
                 <Link href="/about" className="text-muted-foreground hover:text-primary">
                   {t('about')}
                 </Link>
-              </li>
+              </li>*/}
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary">
                 {t('contact')}
@@ -64,24 +60,24 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-3">Customer Service</h3>
+            <h3 className="font-semibold mb-3"> {t('customerService')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/faq" className="text-muted-foreground hover:text-primary">
-                  FAQ
+                  {t('FAQ')}
                 </Link>
               </li>
               <li>
                 <Link href="/shipping" className="text-muted-foreground hover:text-primary">
-                  Shipping & Delivery
+                {t('shippingDelivery')}
                 </Link>
               </li>
               <li>
                 <Link href="/returns" className="text-muted-foreground hover:text-primary">
-                  Returns Policy
+                  {t('returnsPolicy')}
                 </Link>
               </li>
-              <li>
+            {/* <li>
                 <Link href="/privacy" className="text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </Link>
@@ -90,7 +86,7 @@ export function SiteFooter() {
                 <Link href="/terms" className="text-muted-foreground hover:text-primary">
                   Terms & Conditions
                 </Link>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>

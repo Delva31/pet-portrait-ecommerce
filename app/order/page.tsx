@@ -1,11 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Upload, Check } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -15,11 +13,45 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { useTranslation } from "react-i18next"
 
+interface IDataForm 
+{
+  orderNumber: number;
+  firstName: string,
+  lastName: string,
+  email: string,
+  phone: string,
+  address: string,
+  city: string,
+  state: string,
+  zipCode: string,
+  orderType: string,
+  petName: string,
+  additionalInfo: string,
+}
+
+const sendToWhatsApp = (formData: IDataForm) => {
+  const phoneNumber = "+5491126339375"; 
+  
+  const message = `Hola! Quiero hize un pedido *N° ${formData.orderNumber}* para mi mascota *${formData.petName}*
+  *Nombre:* ${formData.firstName} ${formData.lastName}
+  *Teléfono:* ${formData.phone}
+  *Email:* ${formData.email}
+  *Dirección:* ${formData.address} - ${formData.city} (${formData.city}) CP: ${formData.zipCode}
+  *Tipo de pedido:* ${formData.orderType}
+  *Información adicional:*  ${formData.additionalInfo}`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+};
+
+
 export default function OrderPage() {
   const { toast } = useToast()
-    const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<IDataForm>({
+    orderNumber: 0,
     firstName: "",
     lastName: "",
     email: "",
@@ -49,17 +81,19 @@ export default function OrderPage() {
       const file = e.target.files[0]
       setImage(file)
       setImagePreview(URL.createObjectURL(file))
+      
     }
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the data to your backend
-    console.log({ ...formData, image })
+
     toast({
       title: "Order Submitted!",
       description: "We've received your order and will contact you soon.",
     })
+    sendToWhatsApp(formData);
+
   }
 
   return (
@@ -157,7 +191,7 @@ export default function OrderPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="petName">Pet's Name</Label>
+                  <Label htmlFor="petName"> {t('petsName')}</Label>
                   <Input id="petName" name="petName" value={formData.petName} onChange={handleInputChange} required />
                 </div>
 

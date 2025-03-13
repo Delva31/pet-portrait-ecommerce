@@ -16,8 +16,8 @@ export function SiteHeader() {
   const navItems = [
     { title: "Home", href: "/" },
     { title: "gallery", href: "/gallery" },
-    { title: "services", href: "/services" },
-    { title: "about", href: "/about" },
+    //{ title: "services", href: "/services" },
+    //{ title: "about", href: "/about" },
     { title: "contact", href: "/contact" },
   ]
 
@@ -42,7 +42,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/dashboard">
+          {/*<Link href="/dashboard">
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <User className="h-5 w-5" />
               <span className="sr-only">Dashboard</span>
@@ -53,7 +53,7 @@ export function SiteHeader() {
               <ShoppingCart className="h-5 w-5" />
               <span className="sr-only">Cart</span>
             </Button>
-          </Link>
+          </Link>*/}
           <Button asChild className="hidden md:inline-flex">
             <Link href="/order">{t("orderNow")}</Link>
           </Button>
@@ -74,8 +74,8 @@ export function SiteHeader() {
                     href={item.href}
                     className="text-lg font-medium transition-colors hover:text-primary"
                   >
-                    {item.title}
-                  </Link>
+                  {t(item.title)}
+              </Link>
                 ))}
                 <Link href="/dashboard" className="text-lg font-medium transition-colors hover:text-primary">
                   Dashboard

@@ -41,10 +41,18 @@
     "changePhoto":"Cambiar foto",
     "clickUploadOrdrag":"Haga clic para cargar o arrastre y suelte",
     "photoResoltionMax":"PNG, JPG o HEIC (max. 10MB)",
-    "additionalInformation":"Additional Information",
+    "additionalInformation":"Información adiccional",
     "additionalInformationDesc":"Cuéntanos cualquier detalle específico sobre tu mascota o el estilo de retrato que te gustaría...",
     "submitOrder": "Enviar Pedido",
-    "portraitStyle":"Estilo de retrato "
-
+    "portraitStyle":"Estilo de retrato ",
+    "petsName":"Nombre tu mascota",
+    "whoAreWe":"¿Quién somos?",
+    "whoAreWeDesc":"Somos unos emprendedores que hacen retratos personalizados y hechos a mano que capturan la personalidad única de tu amigo peludo",
+    "socialMediaInfo":"Puedes seguirnos o contactarnos en nuestras RRSS",
+    "quickLinks":"Links",
+    "customerService":"Servicio al cliente",
+    "FAQ":"Preguntas frecuentes",
+    "shippingDelivery":"Envío y entrega",
+    "returnsPolicy":"Política de devoluciones"
   }
   

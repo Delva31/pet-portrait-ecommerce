@@ -41,7 +41,15 @@
     "additionalInformation":"Additional Information",
     "additionalInformationDesc":"Tell us any specific details about your pet or the portrait style you'd like...",
     "submitOrder": "Enviar Pedido",
-    "portraitStyle":"Portrait Style "
-
+    "portraitStyle":"Portrait Style ",
+    "petsName":"Pet's Name",
+    "whoAreWe":"Who we are?",
+    "whoAreWeDesc":"We are entrepreneurs who create personalized, handmade portraits that capture your furry friend's unique personality.",
+    "socialMediaInfo":"You can follow us or contact us on our social networks.",
+    "quickLinks":"Quick Links",
+    "customerService":"Customer Service",
+    "FAQ":"FAQ",
+    "shippingDelivery":"Shipping & Delivery",
+    "returnsPolicy":"Returns Policy"
   }
   
